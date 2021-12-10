@@ -4,6 +4,7 @@
 :root {
     --main-bg-colour: hsl(217,54%,11%);
     --card-bg-colour: hsl(216,50%,16%);
+    --soft-blue: hsl(215, 51%, 70%);
 }
 
 * {
@@ -21,19 +22,38 @@ html {
     width: 20%;
     margin: 10vh auto 0 auto;
     display: grid;
+    grid-template-rows: 4fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+            "img"
+            "info"
+            "price-info"
+            "line-break"
+            "creator";
+    grid-gap: 0;
     border-radius: 10px;
     font-family: 'Outfit', sans-serif;
 }
 
 .card img {
-    width: 340px;
-    height: 340px;
-    place-self: center;
-    margin-top: -45px;
+    grid-area: img;
+    width: 90%;
+    height: 350px;
     border-radius: 10px;
+    margin: 20px auto 0 auto;
+}
+.card .info {
+    grid-area: info;
 }
 
 .card h1 {
     color: hsl(0,0%,100%);
     font-weight: 600;
+    font-size: 25px;
+    margin: 0 0 0 25px;
+}
+
+.card p {
+    color: var(--soft-blue);
+    width: 90%;
+    margin: 0 auto;
 }
