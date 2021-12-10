@@ -1,5 +1,9 @@
+/*noinspection CssUnknownTarget*/
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
 :root {
-    --main-bg-colour: hsl(217, 54%, 11%);
+    --main-bg-colour: hsl(217,54%,11%);
+    --card-bg-colour: hsl(216,50%,16%);
 }
 
 * {
@@ -9,4 +13,27 @@
 
 html {
     background-color: var(--main-bg-colour);
+}
+
+.card {
+    background-color: var(--card-bg-colour);
+    height: 80vh;
+    width: 20%;
+    margin: 10vh auto 0 auto;
+    display: grid;
+    border-radius: 10px;
+    font-family: 'Outfit', sans-serif;
+}
+
+.card img {
+    width: 340px;
+    height: 340px;
+    place-self: center;
+    margin-top: -45px;
+    border-radius: 10px;
+}
+
+.card h1 {
+    color: hsl(0,0%,100%);
+    font-weight: 600;
 }
