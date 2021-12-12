@@ -15,6 +15,10 @@
 html {
     background-color: var(--main-bg-colour);
 }
+.icon {
+    width: 20px !important;
+    height: 25px !important;
+}
 
 .card {
     background-color: var(--card-bg-colour);
@@ -22,13 +26,14 @@ html {
     width: 20%;
     margin: 10vh auto 0 auto;
     display: grid;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: 4fr 1fr 1fr 1fr 1fr;
     grid-template-areas:
-            "img"
-            "info"
-            "price-info"
-            "line-break"
-            "creator";
+            "img img"
+            "info info"
+            "price-info time-info"
+            "line-break line-break"
+            "creator creator";
     grid-gap: 0;
     border-radius: 10px;
     font-family: 'Outfit', sans-serif;
@@ -54,6 +59,27 @@ html {
 
 .card p {
     color: var(--soft-blue);
-    width: 90%;
-    margin: 0 auto;
+    font-size: 18px;
+    font-weight: 300;
+    text-align: left;
+    margin: 15px 40px 0 20px;
+}
+.crypto {
+    grid-area: price-info;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas:
+            'icon' 'price' 'price';
+    align-items: center;
+}
+.crypto img {
+    grid-area: icon;
+}
+.crypto p {
+    place-self: center;
+    margin-left: 0;
+}
+.time {
+    grid-area: time-info;
 }
